@@ -25,7 +25,7 @@ saying that *main()* just calls *vuln()*, so we'll start there instead:
 
 ![Untitled](writeup/vuln.png)
 
-Whis is a really interesting function! I always start at string inputs, but
+This is a really interesting function! I always start at string inputs, but
 we can see that the fgets call for the username is limited to the buffer size (1)
 and likewise, the job title is limited to `0x50`, smaller than that buffer (2).
 Moving on, we see the taglines are printed out in a while loop (3), before the 
